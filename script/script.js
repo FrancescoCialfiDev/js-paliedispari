@@ -71,7 +71,10 @@ function PariODispariGame() {
     // Quindi se risultato sarà uguale a true avrai vinto, altrimenti avrai perso.
     if (risultatoSomma === true && pariODispari === "pari") {
         console.log("Hai Vinto")
+    } else if (risultatoSomma === false && pariODispari === "dispari"){
+        console.log("Hai Vinto")
     } else {
-        console.log("Hai Perso")
+        console.log("Hai perso");
+        
     }
 }
