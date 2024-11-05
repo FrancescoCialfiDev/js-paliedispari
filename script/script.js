@@ -6,6 +6,7 @@ console.clear();
 // Chiediamo all'utente di inserire una parola
 
 let parola = prompt("Inserisci una parola")
+let valore = wordReversed ();
 
 
 
@@ -18,7 +19,14 @@ wordReversed (parola)
 
 function wordReversed (word) {
     let parolaGirata = parola.split('').reverse().join('');
-    console.log(parolaGirata)
+    return parolaGirata;
+}
+
+if (valore !== parola ) {
+    console.log("La parola" + " " + parola + " " + "non è palindroma")
+} else {
+    console.log("La parola" + " " + parola + " " + "è palindroma");
+    
 }
 
 
