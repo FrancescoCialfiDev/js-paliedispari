@@ -7,9 +7,9 @@ console.clear();
 
 let scegliGioco = prompt("Scegli a quale gioco vuoi giocare: morra oppure palindromo")
 if (scegliGioco === "morra") {
-    palindromo();
-} else if (scegliGioco == "palindromo") {
     PariODispariGame()
+} else if (scegliGioco === "palindromo") {
+    palindromo();
 } else {
     console.log("Questo gioco non esiste");
 
