@@ -3,32 +3,61 @@
 // Console Clear
 console.clear();
 
+
+//______ESERCIZIO_N1_________________________________________
 // Chiediamo all'utente di inserire una parola
 
-let parola = prompt("Inserisci una parola")
-let valore = wordReversed ();
+function palindromo() {
+    let parola = prompt("Inserisci una parola").toLocaleLowerCase();
+    let valore = wordReversed(parola);
 
 
 
 
-// Chiamo / Invoco la funzione creata
-wordReversed (parola)
+    // Chiamo / Invoco la funzione creata
+    wordReversed(parola)
 
 
-// Creaiamo la funzione
+    // Creaiamo la funzione
 
-function wordReversed (word) {
-    let parolaGirata = parola.split('').reverse().join('');
-    return parolaGirata;
+    function wordReversed(word) {
+        let parolaGirata = parola.split('').reverse().join('');
+        return parolaGirata;
+    }
+
+    if (valore !== parola) {
+        console.log("La parola" + " " + parola + " " + "non è palindroma")
+    } else {
+        console.log("La parola" + " " + parola + " " + "è palindroma");
+
+    }
+}
+//_______________________________________________
+
+//______ESERCIZIO_N2_________________________________________
+
+let giocatoreNumber = parseInt(prompt("Inserisci un numero da uno a cinque"))
+console.log(giocatoreNumber);
+let pariODispari = prompt("Scegli Pari o Dispari")
+console.log(pariODispari);
+let randomNumberComputer = randomNumber(5, 1);
+console.log(randomNumberComputer);
+let somma = randomNumberComputer + giocatoreNumber;
+let risultatoSomma = calcolo ();
+
+randomNumber(5, 1)
+function randomNumber(max, min) {
+    let numero = Math.floor(Math.random() * (max - min + 1)) + min;
+    return numero;
 }
 
-if (valore !== parola ) {
-    console.log("La parola" + " " + parola + " " + "non è palindroma")
+function calcolo () {
+    somma= somma % 2 === 0
+    return somma;
+}
+
+if (risultatoSomma === true && pariODispari === "Pari" ) {
+    console.log("Hai Vinto") 
 } else {
-    console.log("La parola" + " " + parola + " " + "è palindroma");
-    
+    console.log("Hai Perso") 
 }
-
-
-
-
