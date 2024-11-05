@@ -7,6 +7,8 @@ console.clear();
 //______ESERCIZIO_N1_________________________________________
 // Chiediamo all'utente di inserire una parola
 
+//palindromo()
+
 function palindromo() {
     let parola = prompt("Inserisci una parola").toLocaleLowerCase();
     let valore = wordReversed(parola);
@@ -36,7 +38,10 @@ function palindromo() {
 
 //______ESERCIZIO_N2_________________________________________
 
-let giocatoreNumber = parseInt(prompt("Inserisci un numero da uno a cinque"))
+//PariODispariGame ()
+
+function PariODispariGame () {
+    let giocatoreNumber = parseInt(prompt("Inserisci un numero da uno a cinque"))
 console.log(giocatoreNumber);
 let pariODispari = prompt("Scegli Pari o Dispari")
 console.log(pariODispari);
@@ -60,4 +65,5 @@ if (risultatoSomma === true && pariODispari === "Pari" ) {
     console.log("Hai Vinto") 
 } else {
     console.log("Hai Perso") 
+}
 }
